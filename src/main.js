@@ -9,6 +9,8 @@ Vue.config.productionTip = false
 // 引入mint-ui的内容
 import MintUI from "mint-ui"
 import "mint-ui/lib/style.css"
+
+
 // 构建MintUI
 Vue.use(MintUI)
 

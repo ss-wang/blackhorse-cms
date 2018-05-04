@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <mt-header title="上海前段黑马19期">
-      <mt-button v-link="'/'" icon="back" slot="left" v-if="$route.path!='/index'" @click='$router.go(-1)'>返回</mt-button>
+      <mt-button v-link="'/'" icon="back" slot="left" v-if="$route.path!='/home'" @click='$router.go(-1)'>返回</mt-button>
     </mt-header>
     <router-view/>
      <nav class="mui-bar mui-bar-tab">
@@ -32,5 +32,12 @@ export default {
 </script>
 
 <style>
-
+*{
+	margin:0;
+	padding: 0;
+	list-style: none;
+}
+.page{
+	padding: 40px 0 50px 0;
+}
 </style>
