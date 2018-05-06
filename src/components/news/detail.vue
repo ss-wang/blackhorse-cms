@@ -11,11 +11,15 @@
       </div>
       <div class="news_content" v-html="v.content"></div>
     </div>
+    <div class="news-comment">
+      <comment :id="$route.params.id"/>
+    </div>
   </div>
 </template>
 <script>
 import axios from "axios"
 import dataformat from "@/fliters/dataformat"
+import comment from "../comment/comment"
 export default {
   data(){
     return {
@@ -33,6 +37,9 @@ export default {
   },
   filters:{
     dataformat
+  },
+  components:{
+    comment
   }
 }
 </script>
