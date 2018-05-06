@@ -1,6 +1,6 @@
 
 <template>
-<div class="page">
+<div>
   <mt-swipe :auto="1000">
     <mt-swipe-item v-for="(v,i) in pics" :key=i>
       <img :src="v.img" alt="">

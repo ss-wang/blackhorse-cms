@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div>
 <ul class="mui-table-view">
 				<li class="mui-table-view-cell mui-media" v-for="(v,i) in newsList" :key="i">
           <router-link :to= "'/news/detail/' + v.id"  class="mui-navigate-right">

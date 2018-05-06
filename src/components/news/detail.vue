@@ -1,10 +1,10 @@
 <template>
-  <div class="container page">
+  <div class="container">
     <div class="news_detail" v-for="(v,i) in newsInfo" :key="i"> 
       <div class="news_title">
         <h4>{{v.title}}</h4>
         <p>
-          <span>发表时间:{{v.add_time}}</span>
+          <span>发表时间:{{v.add_time|dataformat("YYYY年MM月DD HH:mm:ss")}}</span>
           <span class="mui-pull-right">点击次数：{{v.click}}次</span>
         </p>
         <hr>
@@ -15,6 +15,7 @@
 </template>
 <script>
 import axios from "axios"
+import dataformat from "@/fliters/dataformat"
 export default {
   data(){
     return {
@@ -29,6 +30,9 @@ export default {
         this.newsInfo = res.data.message
       }
     })
+  },
+  filters:{
+    dataformat
   }
 }
 </script>
